@@ -39,6 +39,7 @@ public class mainscreen extends Activity implements AdapterView.OnItemSelectedLi
                 Intent i=new Intent(getApplicationContext(),
                         thirdscreen.class);
                 i.putExtra("bmi", bmi+"");
+                i.putExtra("bmiinterpreter", interpretBMI(bmi) );
                 startActivity(i);
             }
         });
@@ -114,7 +115,7 @@ public class mainscreen extends Activity implements AdapterView.OnItemSelectedLi
         return BMI;
     }
     // Interpret what BMI means
-    private String interpretBMI(float bmiValue) {
+    private String interpretBMI(double bmiValue) {
 
         if (bmiValue < 18) {
             return "Severely underweight";
