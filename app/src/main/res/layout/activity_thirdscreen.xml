@@ -31,6 +31,7 @@
 
         </TextView>
         <TextView
+            android:id="@+id/bmi"
             android:layout_width="70dp"
             android:textColor="@color/black"
             android:layout_marginTop="6dp"
@@ -40,74 +41,143 @@
             android:layout_height="40dp">
 
         </TextView>
+
     </LinearLayout>
+
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:orientation="vertical"
-        android:layout_marginTop="80dp"
-        android:layout_height="match_parent">
+        android:orientation="horizontal"
+        android:layout_height="50dp">
         <TextView
-            android:layout_width="match_parent"
-            android:text="Your Model Data for BMI"
+            android:id="@+id/bmiinterpreter"
+            android:layout_width="200dp"
             android:textColor="@color/black"
-            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp"
+            android:textSize="16dp"
             android:textStyle="bold"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginLeft="20dp"
-            android:layout_height="wrap_content">
+            android:layout_gravity="center"
+            android:text="Your are Empty"
+            android:layout_height="40dp">
 
         </TextView>
 
-        <CheckBox
-            android:layout_width="match_parent"
-            android:text="DIABETES"
-            android:layout_marginLeft="20dp"
-            android:layout_height="20dp">
 
-        </CheckBox>
-        <CheckBox
-            android:layout_width="match_parent"
-            android:text="HIGH BLOOD PRESSURE"
 
-            android:layout_marginLeft="20dp"
-            android:layout_height="20dp">
 
-        </CheckBox> <CheckBox
+
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_marginLeft="20dp"
-        android:text="HIGH COLESTROL"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
 
-        android:layout_height="20dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="20dp"
+            android:text="Are You Suffering From Any of the following diseases"
+            android:textColor="@color/black"
+            android:textSize="17dp"
+            android:textStyle="bold">
 
-    </CheckBox> <CheckBox
-        android:layout_width="match_parent"
-        android:layout_marginLeft="20dp"
-        android:text="NONE"
+        </TextView>
+
+        <!-- add RadioGroup which contain the many RadioButton-->
+        <RadioGroup
+            android:id="@+id/groupradio"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="50dp">
+
+            <!-- In RadioGroup create the 1 Radio Button-->
+            <!-- like this we will add some more Radio Button-->
+            <RadioButton
+                android:id="@+id/hight_blood_pressure"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="HIGH BLOOD PRESSURE"
+                android:textSize="20dp" />
+
+            <RadioButton
+                android:id="@+id/hight_cholestrol"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="HIGH CHOLESTROL"
+                android:textSize="20dp" />
+
+            <RadioButton
+                android:id="@+id/diabetes"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Diabetes"
+                android:textSize="20dp" />
+
+            <RadioButton
+                android:id="@+id/none"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="NONE"
+                android:textSize="20dp" />
+        </RadioGroup>
+
+        <!--        <CheckBox-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:text="DIABETES"-->
+        <!--            android:layout_marginLeft="20dp"-->
+        <!--            android:layout_height="20dp">-->
+
+        <!--        </CheckBox>-->
+        <!--        <CheckBox-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:text="HIGH BLOOD PRESSURE"-->
+
+        <!--            android:layout_marginLeft="20dp"-->
+        <!--            android:layout_height="20dp">-->
+
+        <!--        </CheckBox> <CheckBox-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_marginLeft="20dp"-->
+        <!--        android:text="HIGH COLESTROL"-->
+
+        <!--        android:layout_height="20dp">-->
+
+        <!--    </CheckBox> <CheckBox-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_marginLeft="20dp"-->
+        <!--        android:text="NONE"-->
 
         android:layout_height="20dp"/>
 
 
         <Button
-            android:layout_width="match_parent"
-            android:layout_gravity="center_vertical"
-            android:layout_marginTop="80dp"
-            android:textStyle="bold"
-            android:textSize="16dp"
-            android:textColor="#fff"
             android:id="@+id/move"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginRight="80dp"
             android:background="@drawable/buttton_design"
             android:onClick="move"
             android:text="Next"
-            android:layout_marginRight="80dp"
-            android:layout_marginLeft="80dp"
-            android:layout_height="40dp">
+            android:textColor="#fff"
+            android:textSize="16dp"
+            android:textStyle="bold">
 
         </Button>
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:background="@drawable/img3"
             android:layout_height="150dp"
-            android:layout_marginTop="130dp">
+            android:layout_marginTop="130dp"
+            android:background="@drawable/img3">
 
         </LinearLayout>
 
